@@ -1,5 +1,5 @@
 import { initializeApp, type FirebaseApp } from 'firebase/app'
-import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check'
+import { initializeAppCheck, ReCaptchaEnterpriseProvider } from 'firebase/app-check'
 
 // Firebase config comes from `.env` (see `.env.example`). Nothing here
 // is a secret on its own — the web API key is public by design — but
@@ -40,14 +40,14 @@ export function getFirebaseApp(): FirebaseApp | null {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ;(self as any).FIREBASE_APPCHECK_DEBUG_TOKEN = true
       initializeAppCheck(app, {
-        provider: new ReCaptchaV3Provider(
+        provider: new ReCaptchaEnterpriseProvider(
           (import.meta.env.VITE_RECAPTCHA_SITE_KEY as string | undefined) ?? 'unused-in-debug-mode',
         ),
         isTokenAutoRefreshEnabled: true,
       })
     } else if (import.meta.env.VITE_RECAPTCHA_SITE_KEY) {
       initializeAppCheck(app, {
-        provider: new ReCaptchaV3Provider(import.meta.env.VITE_RECAPTCHA_SITE_KEY as string),
+        provider: new ReCaptchaEnterpriseProvider(import.meta.env.VITE_RECAPTCHA_SITE_KEY as string),
         isTokenAutoRefreshEnabled: true,
       })
     }
