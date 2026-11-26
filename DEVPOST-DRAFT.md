@@ -1,9 +1,9 @@
 # LocalScribe — Devpost submission draft (2026-11-15)
 
 For #BuildHybridAI 2026 (Google · Firebase). Deadline 2026-12-01 06:00 CST.
-DRAFT — written from the finished scaffold; repo and video links are
-placeholders until the repo is public and the video is recorded. All
-technical claims below are verified against the scaffold code
+DRAFT — repo is public and the site is live since 2026-11-20; only the
+video link is still to be added after recording. All technical claims
+below are verified against the scaffold code
 (`workspace/goals/buildhybridai-2026-firebase/files/localscribe/`).
 
 ## Title
@@ -99,13 +99,13 @@ React, TypeScript, Vite
 
 ## Try it out / links
 
-- Live demo: _(add after deploy, Nov 25–27 in the plan)_
-- GitHub repo (public, MIT): _(add once pushed)_
-- Video: _(add after recording, Nov 28–29 in the plan)_
+- Live demo: https://localscribe-1120.netlify.app
+- GitHub repo (public, MIT): https://github.com/Lightofwang/localscribe
+- Video: https://youtu.be/zd8KgWI_9zc
 
 ## Checklist against the rules
 
-- [ ] Public repo with an open-source license (MIT — in the scaffold)
+- [x] Public repo with an open-source license (MIT) — https://github.com/Lightofwang/localscribe
 - [ ] Public YouTube video under 3 minutes, English narration + subtitles
       (script drafted in `video-script.md`)
 - [ ] English text on Devpost (this draft)
